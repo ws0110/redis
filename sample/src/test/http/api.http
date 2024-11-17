@@ -1,0 +1,15 @@
+### 이메일 조회
+GET http://localhost:8080/users/{{id}}/email
+
+### 사용자 조회
+GET http://localhost:8080/users/{{id}}
+
+
+### 세선 조회
+GET http://localhost:8080/session
+
+### Pub/Sub 이벤트 Publish
+POST http://localhost:8080/events/users/deregister
+Content-Type: application/json
+
+{}

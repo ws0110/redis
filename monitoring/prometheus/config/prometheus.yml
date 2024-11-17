@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 1m
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 1m
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'redis-exporter'
+    scrape_interval: 5s  # 5초에 한번 씩
+    static_configs:
+      - targets: ['redis-exporter:9121']  # redis-exporter 컨테이너의 9121 포트로 접속해서 모니터링 정보 가져옴

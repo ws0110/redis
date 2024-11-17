@@ -1,0 +1,18 @@
+spring:
+  session:
+    store-type: redis
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/fastsns
+    username: root
+    password: 1234
+  jpa:
+    hibernate.ddl-auto: update # create, update, validate, none
+    show-sql: true
+
+  # [jedispool] 관련 설정(IntelliJ 런타임 설정에서 disable jmx 설정 추가 필요)
+#  jmx:
+#    enabled: false
